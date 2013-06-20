@@ -1,11 +1,9 @@
-GeoNetwork node for cartopolis
-------------------------------
+# GeoNetwork node for cartopolis
 
 
-# Installation instruction
+## Installation instruction
 
 * Compile source code
-
 ```
 git clone git@github.com:irstv/core-geonetwork.git geonetwork
 cd geonetwork
@@ -39,9 +37,9 @@ GN_DATADIR=/var/gn_data
 JAVA_OPTS="$JAVA_OPTS -Dgeonetwork.dir=$GN_DATADIR -Dgeonetwork.schema.dir=$CATALINA_HOME/webapps/geonetwork/WEB-INF/data/config/schema_plugins -Dgeonetwork.jeeves.configuration.overrides.file=$GN_DATADIR/config-overrides-cartopolis.xml"
 ```
 Here we set :
-* the data directory,
-* the schema plugin directory to use (the webapp one as far as we don't have custom plugins
-* the overriden configuration
+ * the data directory,
+ * the schema plugin directory to use (the webapp one as far as we don't have custom plugins
+ * the overriden configuration
 
 
 * Deploy the webapp
@@ -51,9 +49,9 @@ cp web/target/geonetwork.war $CATALINA_HOME/webapps/.
 ```
 
 
-# Backup instruction
+## Backup instruction
 
 Backup the following:
-* the data dir
-* the db
-* optionnaly - the webapp
+ * the data dir
+ * the db
+ * optionnaly - the webapp
