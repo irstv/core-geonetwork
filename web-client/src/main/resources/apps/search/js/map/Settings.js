@@ -26,20 +26,33 @@ OpenLayers.Util.onImageLoadError = function () {
 // add Proj4js.defs here
 // Proj4js.defs["EPSG:27572"] = "+proj=lcc +lat_1=46.8 +lat_0=46.8 +lon_0=0 +k_0=0.99987742 +x_0=600000 +y_0=2200000 +a=6378249.2 +b=6356515 +towgs84=-168,-60,320,0,0,0,0 +pm=paris +units=m +no_defs";
 Proj4js.defs["EPSG:2154"] = "+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs";
+Proj4js.defs["EPSG:3857"] = "+title=WGS84/Pseudo Mercator, +proj=lcc +lat_1=49.25 +lat_2=50.75 +lat_0=50 +lon_0=3 +x_0=1700000 +y_0=9200000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs";
+
 //new OpenLayers.Projection("EPSG:900913")
 
 
 GeoNetwork.map.printCapabilities = "../../pdf";
 
-// Config for WGS84 based maps
-GeoNetwork.map.PROJECTION = "EPSG:4326";
-GeoNetwork.map.EXTENT = new OpenLayers.Bounds(-180, -90, 180, 90);
-//GeoNetwork.map.EXTENT = new OpenLayers.Bounds(-5.1,41,9.7,51);
-
+//// Config for WGS84 based maps
+//GeoNetwork.map.PROJECTION = "EPSG:4326";
+//GeoNetwork.map.EXTENT = new OpenLayers.Bounds(-180, -90, 180, 90);
+////GeoNetwork.map.EXTENT = new OpenLayers.Bounds(-5.1,41,9.7,51);
+//
+//GeoNetwork.map.BACKGROUND_LAYERS = [
+//    new OpenLayers.Layer.WMS("Background layer", "/geoserver/wms", {layers: 'gn:world,gn:ne_50m_boundary_da,gn:ne_50m_boundary_lines_land,gn:ne_50m_coastline', format: 'image/jpeg'}, {isBaseLayer: true})
+//    //new OpenLayers.Layer.WMS("Background layer", "http://www2.demis.nl/mapserver/wms.asp?", {layers: 'Countries', format: 'image/jpeg'}, {isBaseLayer: true})
+//];
+//Config for maps
+GeoNetwork.map.PROJECTION = "EPSG:3857";
+GeoNetwork.map.MAXEXTENT = new OpenLayers.Bounds(-2.003750834E7, -2.003750834E7, 2.003750834E7, 2.003750834E7);
+//GeoNetwork.map.EXTENT = new OpenLayers.Bounds(112759, 6240094, 522462, 6656869);
+GeoNetwork.map.EXTENT = new OpenLayers.Bounds(-620000, 5920000, 20000, 6250000);
 GeoNetwork.map.BACKGROUND_LAYERS = [
-    new OpenLayers.Layer.WMS("Background layer", "/geoserver/wms", {layers: 'gn:world,gn:ne_50m_boundary_da,gn:ne_50m_boundary_lines_land,gn:ne_50m_coastline', format: 'image/jpeg'}, {isBaseLayer: true})
-    //new OpenLayers.Layer.WMS("Background layer", "http://www2.demis.nl/mapserver/wms.asp?", {layers: 'Countries', format: 'image/jpeg'}, {isBaseLayer: true})
+    new OpenLayers.Layer.WMS("Fond de carte", "http://osm.geobretagne.fr/service/wms", {layers: 'osm:google', format: 'image/png'}, {isBaseLayer: true})
 ];
+// got from view-source:http://osm.geobretagne.fr/gwc01/demo/osm:google?gridSet=EPSG:3857&format=image/png
+GeoNetwork.map.RESOLUTIONS = [156543.0339, 78271.51695, 39135.758475, 19567.8792375, 9783.93961875, 4891.969809375, 2445.9849046875, 1222.99245234375, 611.4962261718748, 305.7481130859374, 152.87405654296887, 76.43702827148444, 38.21851413574208, 19.10925706787104, 9.55462853393552, 4.77731426696776, 2.38865713348388, 1.1943285667420798, 0.5971642833710399, 0.29858214168551994, 0.14929107084275997, 0.07464553542123999];
+
 
 //// Config for OSM based maps
 //GeoNetwork.map.PROJECTION = "EPSG:900913";
@@ -58,7 +71,7 @@ GeoNetwork.map.BACKGROUND_LAYERS = [
 //GeoNetwork.map.OWS = "../../maps/demis.xml";
 //* Default GeoServer layers
 //GeoNetwork.map.OWS = "../../maps/geoserver_localhost.xml";
-GeoNetwork.map.CONTEXT = "../../maps/geoserver_localhost.wmc";
+//GeoNetwork.map.CONTEXT = "../../maps/geoserver_localhost.wmc";
 
 GeoNetwork.map.CONTEXT_MAP_OPTIONS = {
  controls: [],
