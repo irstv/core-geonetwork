@@ -1,0 +1,17 @@
+<overrides>
+  <properties>
+    <!-- DB user -->
+    <db.user>www-data</db.user>
+    <db.pass>www-data</db.pass>
+    
+    <!-- DB properties for PostgreSQL -->
+    <db.driver>org.postgresql.Driver</db.driver>
+    <db.url>jdbc:postgresql://localhost:5432/geonetwork-cartopolis</db.url>
+    <db.validation.query>SELECT 1</db.validation.query>
+    
+    
+    <!-- JS Client configuration -->
+    <widget.url>../../apps/search/</widget.url>
+    <widget.parameters>hl=fre</widget.parameters>
+  </properties>
+</overrides>
