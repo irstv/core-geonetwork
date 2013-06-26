@@ -6,6 +6,22 @@
 	<!-- Define here the property file to be loaded -->
 	<import file="./config-overrides-cartopolis-props.xml"/>
 	
+	<file name=".*/WEB-INF/geoserver-nodes.xml">
+		<replaceXML xpath="node">
+			<id>geoserverCartopolis</id>
+			<name>GeoServer (workspace: cp)</name>
+			<namespacePrefix>cp</namespacePrefix>
+			<namespaceUrl>http://www.cartopolis.org/</namespaceUrl>
+			<adminUrl>http://www.cartopolis.org/geoserver/rest</adminUrl>
+			<wmsUrl>http://www.cartopolis.org/geoserver/wms</wmsUrl>
+			<wfsUrl>http://www.cartopolis.org/geoserver/wfs</wfsUrl>
+			<wcsUrl>http://www.cartopolis.org/geoserver/wcs</wcsUrl>
+			<stylerUrl>http://www.cartopolis.org/geoserver/www/styler/index.html</stylerUrl>
+			<user>admin</user>
+			<password>geoserver</password>
+		</replaceXML>
+	</file>
+	
 	<file name=".*config-gui.xml">
 		<replaceAtt xpath="client" attName="widget" value="true"/>
 		<replaceAtt xpath="client" attName="url" value="${widget.url}"/>
