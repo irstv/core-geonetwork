@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:gml="http://www.opengis.net/gml#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xdt="http://www.w3.org/2005/02/xpath-datatypes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <skos:ConceptScheme rdf:about="http://www.irstv.fr">
+    <dc:title>Zones d'études IRSTV</dc:title>
+    <dc:description>Mots clés de type géographique pour Cartopolis.</dc:description>
+    <dc:creator>
+      <foaf:Organization>
+        <foaf:name>Atelier SIG - IRSTV - FR CNRS 2488</foaf:name>
+      </foaf:Organization>
+    </dc:creator>
+    <dc:rights>Free to all for non commercial use.</dc:rights>
+    <dcterms:issued>2012-07-17</dcterms:issued>
+    <dcterms:modified>2012-07-17 00:00:00</dcterms:modified>
+  </skos:ConceptScheme>
+  <skos:Concept rdf:about="http://www.irstv.fr/thesaurus#zone_etude_irstv">
+    <skos:prefLabel xml:lang="fr">Zones_IRSTV</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://www.irstv.fr" />
+    <skos:narrower rdf:resource="http://www.irstv.fr/thesaurus#zone_etude_irstv_01" />
+    <skos:narrower rdf:resource="http://www.irstv.fr/thesaurus#zone_etude_irstv_02" />
+    <skos:narrower rdf:resource="http://www.irstv.fr/thesaurus#zone_etude_irstv_03" />
+    <skos:narrower rdf:resource="http://www.irstv.fr/thesaurus#zone_etude_irstv_04" />
+    <skos:narrower rdf:resource="http://www.irstv.fr/thesaurus#zone_etude_irstv_11" />
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.irstv.fr/thesaurus#zone_etude_irstv_01">
+    <skos:prefLabel xml:lang="fr">AIRE URBAINE DE NANTES</skos:prefLabel>
+    <gml:BoundedBy>
+      <gml:Envelope gml:srsName="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326">
+        <gml:lowerCorner>-1.93693 46.95461</gml:lowerCorner>
+        <gml:upperCorner>-1.19675 47.55171</gml:upperCorner>
+      </gml:Envelope>
+    </gml:BoundedBy>
+    <skos:broader rdf:resource="http://www.irstv.fr/thesaurus#zone_etude_irstv" />
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.irstv.fr/thesaurus#zone_etude_irstv_02">
+    <skos:prefLabel xml:lang="fr">NANTES METROPOLE</skos:prefLabel>
+    <gml:BoundedBy>
+      <gml:Envelope gml:srsName="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326">
+        <gml:lowerCorner>-1.92600 47.11200</gml:lowerCorner>
+        <gml:upperCorner>-1.34600 47.34000</gml:upperCorner>
+      </gml:Envelope>
+    </gml:BoundedBy>
+    <skos:broader rdf:resource="http://www.irstv.fr/thesaurus#zone_etude_irstv" />
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.irstv.fr/thesaurus#zone_etude_irstv_03">
+    <skos:prefLabel xml:lang="fr">SAP</skos:prefLabel>
+    <gml:BoundedBy>
+      <gml:Envelope gml:srsName="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326">
+        <gml:lowerCorner>-1.55950 47.22949</gml:lowerCorner>
+        <gml:upperCorner>-1.50273 47.26742</gml:upperCorner>
+      </gml:Envelope>
+    </gml:BoundedBy>
+    <skos:broader rdf:resource="http://www.irstv.fr/thesaurus#zone_etude_irstv" />
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.irstv.fr/thesaurus#zone_etude_irstv_04">
+    <skos:prefLabel xml:lang="fr">Pin Sec</skos:prefLabel>
+    <gml:BoundedBy>
+      <gml:Envelope gml:srsName="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326">
+        <gml:lowerCorner>-1.52678 47.24008</gml:lowerCorner>
+        <gml:upperCorner>-1.51745 47.24787</gml:upperCorner>
+      </gml:Envelope>
+    </gml:BoundedBy>
+    <skos:broader rdf:resource="http://www.irstv.fr/thesaurus#zone_etude_irstv" />
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.irstv.fr/thesaurus#zone_etude_irstv_05">
+    <skos:prefLabel xml:lang="fr">ONEVU</skos:prefLabel>
+    <gml:BoundedBy>
+      <gml:Envelope gml:srsName="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326">
+        <gml:lowerCorner>-1.69557 47.24973</gml:lowerCorner>
+        <gml:upperCorner>-1.56374 47.44748</gml:upperCorner>
+      </gml:Envelope>
+    </gml:BoundedBy>
+    <skos:broader rdf:resource="http://www.irstv.fr/thesaurus#zone_etude_irstv" />
+  </skos:Concept>
+</rdf:RDF>
+
