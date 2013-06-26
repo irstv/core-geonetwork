@@ -683,7 +683,7 @@ GeoNetwork.app = function () {
     
     function createHeader() {
         var info = catalogue.getInfo();
-        Ext.getDom('title').innerHTML = '<img class="catLogo" alt="Logo" src="../../images/logos/' + info.siteId + '.gif"/><div><h1>' + info.name + '</h1></div>';
+        Ext.getDom('title').innerHTML = '<a href="javascript:location.href=\'\'"><img class="catLogo" alt="Logo" src="../../images/logos/' + info.siteId + '.gif"/><div><h1>' + info.name + '</h1></div></span>';
         document.title = info.name;
     }
     
