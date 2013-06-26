@@ -639,7 +639,7 @@ GeoNetwork.app = function () {
                 editMode : GeoNetwork.Settings.editor.editMode,
                 catalogue: catalogue,
                 selectionPanelImgPath: '../../apps/js/ext-ux/images',
-                xlinkOptions: {CONTACT: true}
+                xlinkOptions: {CONTACT: false}
             });
             
             this.editorWindow = new Ext.Window({

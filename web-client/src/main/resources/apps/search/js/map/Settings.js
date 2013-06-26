@@ -26,9 +26,6 @@ OpenLayers.Util.onImageLoadError = function () {
 // add Proj4js.defs here
 // Proj4js.defs["EPSG:27572"] = "+proj=lcc +lat_1=46.8 +lat_0=46.8 +lon_0=0 +k_0=0.99987742 +x_0=600000 +y_0=2200000 +a=6378249.2 +b=6356515 +towgs84=-168,-60,320,0,0,0,0 +pm=paris +units=m +no_defs";
 Proj4js.defs["EPSG:2154"] = "+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs";
-Proj4js.defs["EPSG:3857"] = "+title=WGS84/Pseudo Mercator, +proj=lcc +lat_1=49.25 +lat_2=50.75 +lat_0=50 +lon_0=3 +x_0=1700000 +y_0=9200000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs";
-
-//new OpenLayers.Projection("EPSG:900913")
 
 
 GeoNetwork.map.printCapabilities = "../../pdf";
@@ -43,10 +40,11 @@ GeoNetwork.map.printCapabilities = "../../pdf";
 //    //new OpenLayers.Layer.WMS("Background layer", "http://www2.demis.nl/mapserver/wms.asp?", {layers: 'Countries', format: 'image/jpeg'}, {isBaseLayer: true})
 //];
 //Config for maps
-GeoNetwork.map.PROJECTION = "EPSG:3857";
+GeoNetwork.map.PROJECTION = "EPSG:900913";
 GeoNetwork.map.MAXEXTENT = new OpenLayers.Bounds(-2.003750834E7, -2.003750834E7, 2.003750834E7, 2.003750834E7);
+GeoNetwork.map.EXTENT = new OpenLayers.Bounds(-2.003750834E7, -2.003750834E7, 2.003750834E7, 2.003750834E7);
 //GeoNetwork.map.EXTENT = new OpenLayers.Bounds(112759, 6240094, 522462, 6656869);
-GeoNetwork.map.EXTENT = new OpenLayers.Bounds(-620000, 5920000, 20000, 6250000);
+//GeoNetwork.map.EXTENT = new OpenLayers.Bounds(-620000, 5920000, 20000, 6250000);
 GeoNetwork.map.BACKGROUND_LAYERS = [
     new OpenLayers.Layer.WMS("Fond de carte", "http://osm.geobretagne.fr/service/wms", {layers: 'osm:google', format: 'image/png'}, {isBaseLayer: true})
 ];
