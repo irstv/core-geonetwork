@@ -38,9 +38,9 @@
 					<password>${db.pass}</password>
 					<driver>${db.driver}</driver>
 					<url>${db.url}</url>
-					<poolSize>20</poolSize>
+					<poolSize>40</poolSize>
 					<minIdle>0</minIdle>
-					<maxIdle>10</maxIdle>
+					<maxIdle>15</maxIdle>
 					<validationQuery>${db.validation.query}</validationQuery>
 				</config>
 			</resource>
