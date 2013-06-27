@@ -9,9 +9,9 @@
 	<file name=".*/WEB-INF/geoserver-nodes.xml">
 		<replaceXML xpath="node">
 			<id>geoserverCartopolis</id>
-			<name>GeoServer (workspace: cp)</name>
-			<namespacePrefix>cp</namespacePrefix>
-			<namespaceUrl>http://www.cartopolis.org/</namespaceUrl>
+			<name>GeoServer (workspace: gn)</name>
+			<namespacePrefix>gn</namespacePrefix>
+			<namespaceUrl>http://geonetwork-opensource.org/</namespaceUrl>
 			<adminUrl>http://www.cartopolis.org/geoserver/rest</adminUrl>
 			<wmsUrl>http://www.cartopolis.org/geoserver/wms</wmsUrl>
 			<wfsUrl>http://www.cartopolis.org/geoserver/wfs</wfsUrl>
@@ -55,8 +55,8 @@
 					<driver>${db.driver}</driver>
 					<url>${db.url}</url>
 					<poolSize>40</poolSize>
-					<minIdle>0</minIdle>
-					<maxIdle>15</maxIdle>
+					<minIdle>5</minIdle>
+					<maxIdle>40</maxIdle>
 					<validationQuery>${db.validation.query}</validationQuery>
 				</config>
 			</resource>
